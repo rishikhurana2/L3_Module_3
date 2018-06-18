@@ -1,6 +1,9 @@
 package interfaces;
 
-public class BackwardsString implements TextFunkifier{
+public class BackwardsString extends SpecialString{
+	public BackwardsString(String s) {
+		super(s);
+	}
 	String j;
 	static String b;
 	@Override
@@ -10,9 +13,5 @@ public class BackwardsString implements TextFunkifier{
 			b += s.charAt(s.length() - (i+1));
 		}
 		return b;
-	}
-	public static void main(String[] args) {
-		BackwardsString bs = new BackwardsString();
-		System.out.println(bs.funkifyText("This is a test"));
 	}
 }
